@@ -1,0 +1,94 @@
+<form #userform="ngForm" (ngSubmit)="getUserData(userform)">
+      <div class="main">
+          <br><br>
+        <div class="">
+          <div class="d-flex flex-row">
+            <h2 class="type">Organization Name</h2>
+            <input ngModel name="OrganisationName" class="text" matInput placeholder="Name">
+          </div>
+        </div>
+<br><br><br>
+        <div class="">
+          <div class="d-flex flex-row">
+              <h2  class="type">Registration No.</h2>
+              <input ngModel name="RegNo" class="text" type="number" matInput placeholder="Reg.no">
+          </div>
+        </div>
+  <br><br><br>
+        <div class="">
+            <div class="d-flex flex-row">
+              <h2 class="type">Date of Registration</h2>
+              <input matInput  [matDatepicker]="picker" ngModel="date" name="DateOfReg" id="date" class="text" placeholder="mm/dd/yyyy">
+              <mat-datepicker-toggle mat color="accent" class="datepicker" matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker ></mat-datepicker>
+            </div>
+        </div>
+  <br><br><br>
+        <div class="">
+            <h2 mat class="type">Director's Name & Photo </h2>
+        </div>
+  <br>
+        <div class="">
+          <h4 mat>Choose Photo </h4>
+          <div class="d-flex flex-column">
+            <br>
+      
+	 
+	          <div class="picstore"><img style="width: 230px;height: 200px;" [src]="url" *ngIf="url"></div>
+            <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+      
+            <p>
+              <a style="height: fit-content; width: 230px;" onclick="document.getElementById('ele').click()" mat-raised-button color="accent"><input id="ele" style="display:none" type="file" (change)="selectFile($event)"> Upload</a>
+	          </p>
+      
+            <h4 style="width: 138.12px;">Enter name <input class="name" ngModel name="DirectorName" matInput margin-color="accent" placeholder=""></h4>
+          </div>
+        </div>
+    <br><br>
+  
+        <div class="">
+          <div class="d-flex flex-column">
+            <h2 class="type">Source of Fund</h2>
+            <label for="exampleFormControlTextarea1" class="form-label">Enter the address</label>
+            <textarea ngModel name="SourceOfFund" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+          </div>
+        </div>
+  <br><br>
+  
+  <div class="">
+    <div class="d-flex flex-column">
+      <h2 class="type">Office Address</h2>
+      <label for="exampleFormControlTextarea1" class="form-label">Enter the address</label>
+      <textarea ngModel name="OfficeAddress" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+    </div>
+  </div>
+  <br><br>
+  <div class="">
+    
+    <div class="d-flex flex-row">
+      <h2 class="type">Organization Type</h2>
+      <div id="select">
+        <mat-select ngModel="type" name="OrganisationType" class="form">
+          <mat-option readonly >Select</mat-option>
+          <mat-option [value]="org" *ngFor="let org of orglist">{{org}}</mat-option>
+        </mat-select>
+      </div>
+      
+    </div>
+  </div>
+  <br><br><br><br>
+ 
+  <br><br><br><br>
+</div>
+
+<div class="button center d-flex flex justify-content-center">
+    <button style="width: 320px;" mat-raised-button color="accent" type="submit" >Next</button>
+</div>
+
+<div style="height: 50px;background-color:white;">
+    <br><br>
+</div>
+
+     
+
+</form>

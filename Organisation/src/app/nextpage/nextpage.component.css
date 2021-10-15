@@ -1,0 +1,276 @@
+.main{
+    position: absolute;
+    left: 30vw;
+    width:350px;
+}
+.form{
+    position: absolute;
+
+
+right: 0%;
+
+border-radius: 0px;
+font-size: 1em;
+
+
+/* Neutral / Neutral 5 */
+
+
+
+
+}
+.select{
+   display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 16px;
+margin-top: 2%;
+position:absolute;
+width: 138.12px;
+height: 21.36px;
+left: 100%;
+
+
+/* Neutral / White */
+
+background: #FFFFFF;
+/* Action Primary / Active */
+
+border:0.5px solid #080808;
+box-sizing: border-box;
+
+
+/* Inside Auto Layout */
+
+
+
+    
+}
+.text{
+
+align-items: flex-start;
+padding: 0px 6.90612px;
+
+position:absolute;
+width: 138.12px;
+height: 21.36px;
+
+
+/* Neutral / White */
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin-left: 100%;
+
+
+
+}
+#but{
+align-items: center;
+padding: 14px;
+
+position: absolute;
+left: 115%;
+top:85%;
+
+/* Action Secondary / Default */
+
+
+border-radius: 8px;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+.form-control{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 12px 16px;
+
+position: static;
+width: 320px;
+height: 96px;
+left: 0px;
+top: 28px;
+
+/* Neutral / White */
+
+background: #FFFFFF;
+/* Action Primary / Active */
+
+border: 2px solid #080808;
+box-sizing: border-box;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 8px 0px;
+}
+.fin{
+    position: absolute;
+    margin-left: 100%;
+    margin-top: 9%;
+    font-size: 0.8em;
+}
+.newbut{
+
+align-items: center;
+
+
+
+position:absolute;
+left: 140%;
+
+
+
+
+/* Action Secondary / Default */
+
+
+border-radius: 6px;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+
+}
+#sp2,#sp3{
+    top: 49%;
+}
+#sp4,#sp5{
+    top: 58.9%;
+}
+.place{
+    width: 21.36px;
+    
+    
+}
+.plusminus{
+    position: absolute;
+    
+    
+    margin-left: 100%;
+    text-align: center;
+}
+.click{
+    margin-top: -0.57%;
+    box-sizing: 0.4em;
+    
+}
+
+.newbut1{
+
+
+
+position:absolute;
+left: 87.5%;
+box-sizing: 15px;
+
+
+/* Action Secondary / Default */
+
+
+border-radius:0%;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+
+}
+.type{
+    font-size: 1.5em;
+}
+#word,#word1{
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.button{
+    display: flex;
+
+}
+.center{
+    justify-content: center;
+    flex-direction: row;
+    position:relative;
+    top: 1050px;
+}
+@media screen and (max-width: 921px){
+    .main{
+        left: 25vw;
+        width: 250px;
+    }
+    #but{
+        left: 120%;
+        top: 85.5%;
+    }
+   
+
+}
+@media screen and (max-width: 741px){
+    .main{
+        left: 20vw;
+    }
+    
+
+}
+@media screen and (max-width: 621px){
+    .main{
+        left: 15vw;
+    }
+    
+
+}
+@media screen and (max-width: 560px){
+    .main{
+        left: 12vw;
+        width: 210px;
+        
+    }
+    #but{
+        left: 125%;
+    }
+
+}
+@media screen and (max-width: 461px){
+    .main{
+        left: 10vw;
+        width: 200px;
+    }
+    
+
+}
+@media screen and (max-width: 421px){
+    .main{
+        left: 8vw;
+    }
+    
+
+}
+@media screen and (max-width: 351px){
+    .main{
+        left: 3vw;
+    }
+    
+
+}
+

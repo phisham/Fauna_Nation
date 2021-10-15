@@ -1,0 +1,92 @@
+<form action="" #userform="ngForm" (ngSubmit)="getUserData(userform)">
+<div class="main">
+    <br><br>
+    <div class="d-flex flex-row">
+        <h2 class="type">Rescue Domain</h2>
+        <div class="select" id="rescue">
+            
+                <mat-select ngModel name="RescueDomain" class="form">
+                    <mat-option readonly >Select</mat-option>
+                    <mat-option [value]="domain" *ngFor="let domain of domainlist">{{domain}}</mat-option>
+                </mat-select>
+            
+    
+        </div>
+    </div>
+    <br><br>
+    <div id="space1" class="d-flex flex-row">
+        <h2 mat class="type">Rescue Centre Address</h2>
+    </div>
+    <div class="label">
+        <label for="exampleFormControlTextarea1" class="form-label">Enter the address</label>
+        <textarea ngModel name="RCentreAdd" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+    </div>
+    <br><br>
+    <div id="space2" class="d-flex flex-row">
+        <h2 class="type">Type of Centre</h2>
+        <div class="select" id="centre">
+            
+                <mat-select ngModel name="TypeOfCentre" class="form">
+                    <mat-option >Select</mat-option>
+                    <mat-option [value]="centre" *ngFor="let centre of centrelist">{{centre}}</mat-option>
+                </mat-select>
+        
+
+        </div>
+    </div>
+    <br><br><br>
+    <div id="space3" class="d-flex flex-row">
+        <h2 class="type" id="new">No. of Animals</h2>
+          <div class="plusminus d-flex flex-row">
+            <button class="click"  type="button" mat-raised-button color="accent" (click)="minus()">&#9866;</button>
+            <input class="place text-center" ngModel name="NoOfAnimals" [value]="count" matInput readonly placeholder="">
+            <button class="click" type="button" mat-raised-button color="accent" (click)="plus()">&#10010;</button>
+          </div>
+    </div>
+    <br><br><br>
+    <div id="space4" class="d-flex flex-row">
+        <h2 class="type">No. of Days</h2>
+         <div class="plusminus d-flex flex-row">
+           <button class="click" type="button" mat-raised-button color="accent" (click)="minus1()">&#9866;</button>
+            <input class="place text-center" ngModel name="NoOfDays" [value]="count1" matInput readonly placeholder="">
+            <button class="click" type="button" mat-raised-button color="accent" (click)="plus1()">&#10010;</button>
+         </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex flex-row">
+        <h2 mat class="type">Veterinary Doctor's  Availability</h2>
+        <div class="select" id="sp1">
+            
+                <mat-select ngModel name="DrAvailability" class="form">
+                    <mat-option >Select</mat-option>
+                    <mat-option [value]="Availability" *ngFor="let Availability of availabilitylist">{{Availability}}</mat-option>
+                </mat-select>
+            
+      
+        </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex flex-row">
+        <h2 class="type">No. of Rescuers</h2>
+    
+        <input class="text" id="sp" ngModel name="NoOfRescuers" type="number" [value]="rescuers" matInput readonly placeholder="">
+        <h3 class="fin">Add Rescuers</h3><a type="submit" id="but" mat-raised-button color="accent" (click)="add()">&#10010;</a>
+        <br><br><br>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    
+
+</div>
+<br><br><br><br>
+<div class="button center d-flex flex justify-content-center">
+    <button style="width: 320px;" mat-raised-button color="accent" type="submit" >Submit</button>
+</div>
+<div style="height: 50px;background-color:white;position: relative;top: 1100px;">
+    <br><br>
+</div>
+
+</form>
+
+
