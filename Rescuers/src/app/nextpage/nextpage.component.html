@@ -1,0 +1,86 @@
+<form #userform="ngForm" (ngSubmit)="getData(userform)">
+<div class="main d-flex flex-column justify-content-sm-center">
+  <br><br>
+  <div class="torow d-flex flex-row">
+    <h2 class="type">Rescuer's Organization</h2>
+    <div class="d-flex flex-row" id="select">
+     
+        <mat-select ngModel name="RescuerOrganisation" class="form">
+          <mat-option readonly >Select</mat-option>
+          <mat-option [value]="org" *ngFor="let org of orglist">{{org}}</mat-option>
+        </mat-select>
+      
+    
+    </div>
+  </div>
+  <h2 class="type" style="color: crimson;">Organization NOT listed ?Ask your Organization to join.</h2>
+  <br>
+  <h2 class="type" style="color: crimson;">If not belong to an Organization, then </h2>
+  <br>
+  <div class="d-flex flex-row">
+    <h2 class="type">Profession</h2>
+    <input ngModel name="Profession" class="text" type="text" matInput placeholder="Enter your profession">
+  </div>
+  <br><br><br>
+  <div>
+    <h2 class="type">Availability</h2>
+  
+    <div class="d-flex flex-row" id="select1">
+      
+        <mat-select ngModel name="AvailDay" class="form">
+         <mat-option value="Full Day" >Full Day</mat-option>
+         <mat-option value="Half Day">Half Day</mat-option>
+        </mat-select>
+      
+      <div style="position: absolute;left: 120%; margin-top: -5%;" class="d-flex flex-row">
+        <h2>From</h2>
+        <input ngModel name="AvailTimeFrm" type="time" style="border: none;border-bottom: 1px solid black;padding: 5px 10px;height: 21.36px;width: 80px;" placeholder="">
+        <h2>To</h2>
+        <input ngModel name="AvailTimeTo" type="time" style="border: none;border-bottom: 1px solid black;padding: 5px 10px;height: 21.36px;width: 80px;"  matInput placeholder="">
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="d-flex flex-row text-center">
+    <a mat-fab [color]="color?'accent':'black'" (click)="change()">S</a>
+    <a mat-fab [color]="color1?'accent':'black'" (click)="change1()">S</a>
+    <a mat-fab [color]="color2?'accent':'black'" (click)="change2()">M</a>
+    <a mat-fab [color]="color3?'accent':'black'" (click)="change3()">T</a>
+    <a mat-fab [color]="color4?'accent':'black'" (click)="change4()">W</a>
+    <a mat-fab [color]="color5?'accent':'black'" (click)="change5()">T</a>
+    <a mat-fab [color]="color6?'accent':'black'" (click)="change6()">F</a>
+  </div>
+  <br><br><br>
+  <div class="d-flex flex-row">
+    <h2 class="type">Rescuing Since</h2>
+    <input ngModel name="Since" class="text" type="datetime" matInput placeholder="">
+  </div>
+  <br><br>
+  <h2 class="type">Previous Rescued Animals</h2>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Enter the details</label>
+    <textarea ngModel name="PrevRescuedAnimals" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+  </div>
+  <br><br>
+  <div id="space3" class="d-flex flex-row">
+        <h2 class="type" id="new">Alternate Animals</h2>
+          <div class="plusminus d-flex flex-row">
+            <button class="click"  type="button" mat-raised-button color="accent" (click)="minus()">&#9866;</button>
+            <input class="place text-center" [value]="count" matInput readonly placeholder="">
+            <button class="click" type="button" mat-raised-button color="accent" (click)="plus()">&#10010;</button>
+          </div>
+  </div>
+
+<br><br><br>
+</div>
+<br>
+<div class="button center d-flex flex justify-content-center">
+    <button style="width: 320px;" mat-raised-button color="accent" type="submit"  >Next</button>
+</div>
+
+<div style="height: 50px;background-color:white;">
+    <br><br>
+</div>
+</form>
+
+
