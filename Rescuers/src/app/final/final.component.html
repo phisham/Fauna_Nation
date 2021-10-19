@@ -17,12 +17,12 @@
   </div>
   <br>
   <h2 class="type">If Yes, Name of snake</h2>
-  <div class="mb-3">
+  <div class="mb-3 d-flex flex-column">
     <label for="exampleFormControlTextarea1" class="form-label">Enter the name</label>
-    <textarea ngModel name="NameOfSnake" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+    <input type="text" style="width:150px;border-color: black;border-width: 1px;" ngModel name="NameOfSnake" id="" matInput >
   </div>
   <div class="d-flex flex-row">
-    <h2 class="type">Registration Documents</h2>
+    <h2 class="type" style="margin-top: 2%;">Registration Documents</h2>
 
     <a type="menu" style="height: fit-content;" class="text" onclick="document.getElementById('ele').click()" mat-raised-button color="accent"><input id="ele" style="display:none" type="file" (change)="selectFile($event)"> Upload</a>
     <div [innerHtml]="text" style="width: 100px;color: red;position: absolute;left: 92%;margin-top: 14%;"></div>

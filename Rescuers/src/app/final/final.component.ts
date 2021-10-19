@@ -35,14 +35,15 @@ export class FinalComponent implements OnInit {
 	
 		
 		var reader = new FileReader();
-		reader.readAsBinaryString(event.target.files[0]);
-		
+		reader.readAsDataURL(event.target.files[0]);
+	
 		reader.onload = (_event) => {
 			this.msg = "";
 			this.text = event.target.files[0].name;
+    
 		}
-
-    const file = event.target.files[0];
+    
+    const file = event.target.files[0].toString();
     this.form.patchValue({
       doc: file
     });
@@ -91,8 +92,8 @@ export class FinalComponent implements OnInit {
     formdata.append("Team",this.service.Team);
     formdata.append("Injury",userform.value.Injury);
     formdata.append("SnakeBite",this.test);
-    formdata.append("NameOfSnake",5);
-    formdata.append("Documents",6);
+    formdata.append("NameOfSnake",userform.value.NameOfSnake);
+    formdata.append("Documents",this.form.get('doc')?.value);
 		formdata.append("image",this.service.image);
 		//console.log(JSON.stringify(formdata));
 		this.http.post('https://fauna-api.herokuapp.com/api/create-rescuer',formdata).subscribe((data)=>{
@@ -100,6 +101,7 @@ export class FinalComponent implements OnInit {
             console.log(data);
         }
 		)
+  
   }
 
 }
