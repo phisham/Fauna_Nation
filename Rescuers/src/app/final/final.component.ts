@@ -101,7 +101,7 @@ export class FinalComponent implements OnInit {
             console.log(data);
         }
 		)
-  
+
   }
 
 }

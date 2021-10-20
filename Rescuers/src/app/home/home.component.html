@@ -1,102 +1,102 @@
 <form action="" #userform="ngForm" (ngSubmit)="getData(userform)">
-<div class="main d-flex flex-column justify-content-sm-center">
-  <br><br>
-  <div class="d-flex flex-row">
-    <h2 class="type">D.O.B </h2>
-    <div class="text d-flex flex-row">
-        <input ngModel name="DOB" type="date" matInput placeholder="Enter the date">
-    </div>
-  </div>
-  <br>
-  <div class="d-flex flex-row">
-    <h2 class="type">Whatsapp No.</h2>
-    <input ngModel name="WhatsAppNo" class="text" type="text" matInput placeholder="Enter the number">
-  </div>
-  <br>
-  <div class="d-flex flex-row">
-    <h2 class="type">Alternate No.</h2>
-    <input ngModel name="AlternateNo" class="text" type="text" matInput placeholder="Enter the number">
-  </div>
-  <br>
-  <h2 class="type">Residential Address</h2>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Enter the address</label>
-    <textarea ngModel name="ResAddress" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-  </div>
-  <br>
-  <div class="d-flex flex-row">
-    <h2 class="type">Blood Group</h2>
-    <input ngModel name="BloodGroup" class="text" type="text" matInput placeholder="Enter the number">
-  </div>
-  <br>
-  <div class="d-flex flex-row">
-    <h2 class="type">Photograph</h2>
+  <div class="main d-flex flex-column justify-content-sm-center">
+      <br><br>
+      <div class="d-flex flex-row">
+          <h2 class="type">D.O.B </h2>
+          <div class="text d-flex flex-row">
+              <input ngModel name="DOB" type="date" matInput placeholder="Enter the date">
+          </div>
+      </div>
+      <br>
+      <div class="d-flex flex-row">
+          <h2 class="type">Whatsapp No.</h2>
+          <input ngModel name="WhatsAppNo" class="text" type="text" matInput placeholder="Enter the number">
+      </div>
+      <br>
+      <div class="d-flex flex-row">
+          <h2 class="type">Alternate No.</h2>
+          <input ngModel name="AlternateNo" class="text" type="text" matInput placeholder="Enter the number">
+      </div>
+      <br>
+      <h2 class="type">Residential Address</h2>
+      <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Enter the address</label>
+          <textarea ngModel name="ResAddress" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+      </div>
+      <br>
+      <div class="d-flex flex-row">
+          <h2 class="type">Blood Group</h2>
+          <input ngModel name="BloodGroup" class="text" type="text" matInput placeholder="Enter the number">
+      </div>
+      <br>
+      <div class="d-flex flex-row">
+          <h2 class="type">Photograph</h2>
 
-    <a style="height: fit-content;" class="text" onclick="document.getElementById('ele').click()" mat-raised-button color="accent"><input id="ele" style="display:none" type="file" (change)="selectFile($event)"> Upload</a>
-    <div [innerHtml]="text" style="width: 100px;color: red;position: absolute;left: 92%;margin-top: 15%;"></div>
-    <div [innerHtml]="msg" style="width: 100px;color: red;position: absolute;left:92%;margin-top: 15%;"></div>
+          <a style="height: fit-content;" class="text" onclick="document.getElementById('ele').click()" mat-raised-button color="accent"><input id="ele" style="display:none" type="file" (change)="selectFile($event)"> Upload</a>
+          <div [innerHtml]="text" style="width: 100px;color: red;position: absolute;left: 92%;margin-top: 15%;"></div>
+          <div [innerHtml]="msg" style="width: 100px;color: red;position: absolute;left:92%;margin-top: 15%;"></div>
     
+      </div>
+  
+      <br><br><br>
+  
+      <h2 style="font-weight: bolder;" class="type">Emergency Contact</h2>
+  
+      <div class="d-flex flex-row">
+          <h2 class="type">Name</h2>
+          <input ngModel name="EmName" class="text" type="text" matInput placeholder="Enter the name">
+      </div>
+  
+      <br>
+
+      <div class="d-flex flex-row">
+          <h2 class="type">Relation</h2>
+          <input ngModel name="EmRelation" class="text" type="text" matInput placeholder="Enter relation">
+      </div>
+
+      <br>
+
+      <div class="d-flex flex-row">
+          <h2 class="type">Number</h2>
+          <input ngModel name="EmNumber" class="text" type="text" matInput placeholder="Enter the number">
+      </div>
+
+  
+      <br><br><br>
+      <h2 style="font-weight: bolder;" class="type">Social Media Links</h2>
+      <div class="d-flex flex-row">
+          <mat-radio-button (click)="press()">Instagram</mat-radio-button>
+          <input ngModel name="Instagram" class="text" (click)="fix()" *ngIf="show" type="text" matInput placeholder="Enter the link">
+      </div>
+      <br>
+      <div class="d-flex flex-row">
+          <mat-radio-button (click)="press1()">Facebook</mat-radio-button>
+          <input ngModel name="FaceBook" class="text" (click)="fix1()" *ngIf="show1" type="text" matInput placeholder="Enter the link">
+      </div>
+      <br>
+      <div class="d-flex flex-row">
+          <mat-radio-button (click)="press2()">Linkedin</mat-radio-button>
+          <input ngModel name="LinkedIn" class="text" (click)="fix2()" *ngIf="show2" type="text" matInput placeholder="Enter the link">
+      </div>
+      <br>
+      <div class="d-flex flex-row">
+          <mat-radio-button (click)="press3()">Youtube</mat-radio-button>
+          <input ngModel name="YouTube" class="text" (click)="fix3()" *ngIf="show3" type="text" matInput placeholder="Enter the link">
+      </div>
+  
+      <br><br><br><br>
+  
+
+      <br><br><br><br>
+
   </div>
-  
-  <br><br><br>
-  
-    <h2 style="font-weight: bolder;" class="type">Emergency Contact</h2>
-  
-    <div class="d-flex flex-row">
-      <h2 class="type">Name</h2>
-      <input ngModel name="EmName" class="text" type="text" matInput placeholder="Enter the name">
-    </div>
-  
   <br>
-
-    <div class="d-flex flex-row">
-      <h2 class="type">Relation</h2>
-      <input ngModel name="EmRelation" class="text" type="text" matInput placeholder="Enter relation">
-    </div>
-
-  <br>
-
-    <div class="d-flex flex-row">
-      <h2 class="type">Number</h2>
-      <input ngModel name="EmNumber" class="text" type="text" matInput placeholder="Enter the number">
-    </div>
-
-  
-  <br><br><br>
-  <h2 style="font-weight: bolder;" class="type">Social Media Links</h2>
-  <div class="d-flex flex-row">
-    <mat-radio-button (click)="press()">Instagram</mat-radio-button>
-    <input ngModel name="Instagram" class="text" (click)="fix()" *ngIf="show" type="text" matInput placeholder="Enter the link">
+  <div class="button center d-flex flex justify-content-center">
+      <button style="width: 320px;" mat-raised-button color="accent" type="submit"  >Next</button>
   </div>
-  <br>
-  <div class="d-flex flex-row">
-    <mat-radio-button (click)="press1()">Facebook</mat-radio-button>
-    <input ngModel name="FaceBook" class="text" (click)="fix1()" *ngIf="show1" type="text" matInput placeholder="Enter the link">
-  </div>
-  <br>
-  <div class="d-flex flex-row">
-    <mat-radio-button (click)="press2()">Linkedin</mat-radio-button>
-    <input ngModel name="LinkedIn" class="text" (click)="fix2()" *ngIf="show2" type="text" matInput placeholder="Enter the link">
-  </div>
-  <br>
-  <div class="d-flex flex-row">
-    <mat-radio-button (click)="press3()">Youtube</mat-radio-button>
-    <input ngModel name="YouTube" class="text" (click)="fix3()" *ngIf="show3" type="text" matInput placeholder="Enter the link">
-  </div>
-  
-  <br><br><br><br>
-  
 
-  <br><br><br><br>
-
-</div>
-<br>
-<div class="button center d-flex flex justify-content-center">
-    <button style="width: 320px;" mat-raised-button color="accent" type="submit"  >Next</button>
-</div>
-
-<div style="height: 50px;background-color:white;">
-    <br><br>
-</div>
+  <div style="height: 50px;background-color:white;">
+      <br><br>
+  </div>
 
 </form>
