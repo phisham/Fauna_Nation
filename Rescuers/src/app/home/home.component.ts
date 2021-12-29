@@ -31,6 +31,13 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  webform=new FormGroup({
+    
+    whatsappNumber: new FormControl('',Validators.required),
+    alternateNumber: new FormControl('',Validators.required),
+    contactNumber: new FormControl('',Validators.required),
+    
+  })
   ngOnInit(): void {
   }
   press(){

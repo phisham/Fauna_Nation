@@ -4,18 +4,18 @@
       <div class="d-flex flex-row">
           <h2 class="type">D.O.B </h2>
           <div class="text d-flex flex-row">
-              <input ngModel name="DOB" type="date" matInput placeholder="Enter the date">
+              <input ngModel name="DOB" max="2003-12-31" type="date" matInput placeholder="Enter the date">
           </div>
       </div>
       <br>
       <div class="d-flex flex-row">
           <h2 class="type">Whatsapp No.</h2>
-          <input ngModel name="WhatsAppNo" class="text" type="text" matInput placeholder="Enter the number">
+          <input ngModel name="WhatsAppNo" class="text" type="number"  maxlength="10" oninput="javascript: if(this.value.length>this.maxLength) this.value=this.value.slice(0,this.maxLength);" matInput placeholder="Enter the number">
       </div>
       <br>
       <div class="d-flex flex-row">
           <h2 class="type">Alternate No.</h2>
-          <input ngModel name="AlternateNo" class="text" type="text" matInput placeholder="Enter the number">
+          <input ngModel name="AlternateNo" class="text" type="number" maxlength="10" oninput="javascript: if(this.value.length>this.maxLength) this.value=this.value.slice(0,this.maxLength);" matInput placeholder="Enter the number">
       </div>
       <br>
       <h2 class="type">Residential Address</h2>
@@ -58,7 +58,7 @@
 
       <div class="d-flex flex-row">
           <h2 class="type">Number</h2>
-          <input ngModel name="EmNumber" class="text" type="text" matInput placeholder="Enter the number">
+          <input ngModel name="EmNumber" class="text" type="number" maxlength="10" oninput="javascript: if(this.value.length>this.maxLength) this.value=this.value.slice(0,this.maxLength);" matInput placeholder="Enter the number">
       </div>
 
   
